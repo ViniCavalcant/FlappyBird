@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+        const body = document.querySelector('body')
+
+        const div1 = document.createElement('div')
+        div1.classList.add('destaque')
+        div1.innerHTML = 'Primeiro'
+
+        const div2 = document.createElement('div')
+        div2.setAttribute('wm-atributo', 'valor')
+        div2.innerHTML = 'Segundo'
+
+        body.appendChild(div1)
+        body.appendChild(div2)
+
+        const texto = document.createTextNode('teste..')
+        div2.insertBefore(texto, div2.childNodes[0])
+
+        const div3 = div2.cloneNode(true)
+        body.appendChild(div3)
+    </script>
+</body>
+
+</html>
