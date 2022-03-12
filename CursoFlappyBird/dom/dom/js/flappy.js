@@ -15,10 +15,6 @@ function novoElemento(tagName, className) {
     this.setAltura = altura => corpo.style.height = `${altura}px`
   }
   
-  
-  
-  
-  
   function ParDeBarreiras(altura, abertura, x) {
     this.elemento = novoElemento('div', 'par-de-barreiras')
   
@@ -169,7 +165,8 @@ function novoElemento(tagName, className) {
         passaro.animar()
   
         if(colidiu(passaro, barreiras)) {
-            clearInterval(temporizador)
+          // estudar  
+          clearInterval(temporizador)
         }
       }, 20)
     }
